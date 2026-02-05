@@ -34,3 +34,6 @@ models/
 *.tmp
 *.temp
 windy_session.txt
+venv/
+__pycache__/
+*.pyc
