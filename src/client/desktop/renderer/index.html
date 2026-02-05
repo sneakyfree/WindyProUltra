@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
+  <title>Windy Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="window">
+    <!-- Draggable Title Bar -->
+    <div class="title-bar" id="titleBar">
+      <div class="title-bar-left">
+        <span class="logo">🌪️</span>
+        <span class="title">Windy Pro</span>
+      </div>
+      <div class="title-bar-right">
+        <button class="title-btn" id="settingsBtn" title="Settings">⚙️</button>
+        <button class="title-btn" id="minimizeBtn" title="Minimize">─</button>
+        <button class="title-btn close" id="closeBtn" title="Close">×</button>
+      </div>
+    </div>
+    
+    <!-- State Indicator (The Green Strobe) -->
+    <div class="state-indicator" id="stateIndicator">
+      <div class="state-glow" id="stateGlow"></div>
+      <div class="state-label" id="stateLabel">Ready</div>
+    </div>
+    
+    <!-- Transcript Display -->
+    <div class="transcript-container" id="transcriptContainer">
+      <div class="transcript-scroll" id="transcriptScroll">
+        <div class="transcript-content" id="transcriptContent">
+          <!-- Transcript segments will appear here -->
+          <div class="placeholder">Press <kbd>Ctrl+Shift+Space</kbd> to start recording</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Control Bar -->
+    <div class="control-bar">
+      <button class="control-btn primary" id="recordBtn" title="Start/Stop Recording">
+        <span class="icon">🎤</span>
+        <span class="label">Record</span>
+      </button>
+      <button class="control-btn" id="clearBtn" title="Clear Transcript">
+        <span class="icon">🗑️</span>
+      </button>
+      <button class="control-btn" id="copyBtn" title="Copy All">
+        <span class="icon">📋</span>
+      </button>
+      <button class="control-btn" id="pasteBtn" title="Paste to Cursor">
+        <span class="icon">📝</span>
+      </button>
+    </div>
+    
+    <!-- Connection Status -->
+    <div class="status-bar" id="statusBar">
+      <span class="status-dot" id="connectionDot"></span>
+      <span class="status-text" id="connectionText">Connecting...</span>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

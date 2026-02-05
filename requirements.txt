@@ -1,0 +1,18 @@
+# Windy Pro Dependencies
+# Core transcription engine
+faster-whisper>=1.0.0
+numpy>=1.24.0
+
+# Audio processing
+sounddevice>=0.4.6
+soundfile>=0.12.0
+
+# Optional: VAD with Silero
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# For Electron IPC (WebSocket server)
+websockets>=12.0
+
+# Development
+pytest>=7.0.0
