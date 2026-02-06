@@ -52,7 +52,8 @@ def main():
     
     # Initialize components
     transcriber = StreamingTranscriber(config)
-    capture = AudioCapture()
+    # Enable mock mode for headless environments (like Hostinger)
+    capture = AudioCapture(allow_mock=True)
     
     # State tracking
     current_state = [TranscriptionState.IDLE]

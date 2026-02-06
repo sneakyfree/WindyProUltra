@@ -250,50 +250,50 @@ CODONS:
 #### B1: Electron Shell
 ```
 FILE: src/client/desktop/main.js
-STATUS: 🔲 NOT STARTED (Phase 1.2)
+STATUS: ✅ COMPLETE (Phase 1.1)
 
 CODONS:
-├── B1.1 Main Process
+├── B1.1 Main Process ✅
 │   ├── Create BrowserWindow (floating, frameless)
-│   ├── System tray integration
+│   ├── System tray integration (Stubbed)
 │   ├── Global hotkey registration
 │   ├── Auto-updater
 │   └── IPC handlers
 │
-├── B1.2 Window Properties
+├── B1.2 Window Properties ✅
 │   ├── alwaysOnTop: true
 │   ├── frame: false (custom title bar)
 │   ├── transparent: true (for strobe effect)
 │   ├── resizable: true (min 200x100)
 │   └── skipTaskbar: false
 │
-├── B1.3 Tray Menu
+├── B1.3 Tray Menu ⚠️ (Stubbed)
 │   ├── Show/Hide window
 │   ├── Start/Stop recording
 │   ├── Settings
 │   ├── Open Vault
 │   └── Quit
 │
-└── B1.4 Global Hotkeys
-    ├── Toggle recording: Ctrl+Shift+Space (configurable)
-    ├── Paste transcript: Ctrl+Shift+V (configurable)
-    └── Show/Hide: Ctrl+Shift+W (configurable)
+└── B1.4 Global Hotkeys ✅
+    ├── Toggle recording: Ctrl+Shift+Space
+    ├── Paste transcript: Ctrl+Shift+V
+    └── Show/Hide: Ctrl+Shift+W
 ```
 
 #### B2: Renderer (React + Tailwind)
 ```
 FILE: src/client/desktop/renderer/
-STATUS: 🔲 NOT STARTED (Phase 1.2)
+STATUS: 🟡 IN PROGRESS (Phase 1.1)
 
 CODONS:
-├── B2.1 Component: FloatingWindow
+├── B2.1 Component: FloatingWindow ✅
 │   ├── Draggable header
 │   ├── State indicator (color)
 │   ├── Transcript display
 │   ├── Control buttons
 │   └── Settings gear
 │
-├── B2.2 Component: StateIndicator
+├── B2.2 Component: StateIndicator ✅ (The Green Strobe)
 │   ├── CSS animation: strobe effect
 │   ├── Colors: gray/green/yellow/red/blue
 │   ├── Pulse rate: 1Hz for listening
@@ -522,8 +522,8 @@ WEEK 1:
 ├── [x] A1: Transcription Engine ✅
 ├── [x] A2: Audio Capture ✅
 ├── [x] A3: WebSocket Server ✅
-├── [ ] B1: Electron Shell
-└── [ ] B2.1-B2.2: FloatingWindow + StateIndicator
+├── [x] B1: Electron Shell ✅
+└── [x] B2.1-B2.2: FloatingWindow + StateIndicator ✅
 
 WEEK 2:
 ├── [ ] B2.3-B2.5: TranscriptView + ControlBar + State

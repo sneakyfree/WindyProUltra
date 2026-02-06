@@ -71,7 +71,7 @@ class WindyServer:
             "words": segment.words
         }))
     
-    async def _handle_client(self, websocket: WebSocketServerProtocol):
+    async def _handle_client(self, websocket):
         """Handle a client connection."""
         self.clients.add(websocket)
         client_addr = websocket.remote_address
@@ -105,7 +105,7 @@ class WindyServer:
             self.clients.discard(websocket)
             print(f"Client disconnected: {client_addr}")
     
-    async def _handle_command(self, cmd: dict, websocket: WebSocketServerProtocol):
+    async def _handle_command(self, cmd: dict, websocket):
         """Handle a command from client."""
         action = cmd.get("action")
         
